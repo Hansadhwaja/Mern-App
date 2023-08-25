@@ -7,7 +7,7 @@ const Read = () => {
 
 
 async function getData(){
-  const response=await fetch("https://mern-app-backend-2yoxy2j7h-hansadhwaja.vercel.app", {mode: "no-cors"});
+  const response=await fetch("https://mern-app-backend-indol.vercel.app", {mode: "no-cors"});
   const result=await response.json();
   
   if(response.ok){
@@ -25,7 +25,7 @@ async function getData(){
 
 const handleDelete= async (id)=>{
   console.log(id);
-  const response=await fetch(`https://mern-app-backend-2yoxy2j7h-hansadhwaja.vercel.app/${id}`,{
+  const response=await fetch(`https://mern-app-backend-indol.vercel.app/${id}`,{
     method:"DELETE",
     mode: "no-cors"
   });

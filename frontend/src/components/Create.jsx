@@ -15,7 +15,7 @@ const Create = () => {
 
     const addUser={name,email,age};
 
-    const response= await fetch("https://mern-app-backend-2yoxy2j7h-hansadhwaja.vercel.app",{
+    const response= await fetch("https://mern-app-backend-indol.vercel.app",{
       method:"POST",
       body:JSON.stringify(addUser),
       headers:{
