@@ -16,7 +16,7 @@ app.use(cors(
 ));
 
 
-mongoose.connect(process.env.URI).
+mongoose.connect("mongodb+srv://"+process.env.URI+"@cluster0.iewubng.mongodb.net/mernDB").
 then(()=>{
     console.log("Connected to db successfully");
     app.listen(process.env.PORT || 8000,(err)=>{
