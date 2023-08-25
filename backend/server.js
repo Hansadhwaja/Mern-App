@@ -7,7 +7,13 @@ app.use(express.json());
 const userRoute=require("./routes/userRoutes");
 const cors=require("cors");
 
-app.use(cors());
+app.use(cors(
+    {
+        origin:["https://mern-app-frontend-vert.vercel.app"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+));
 
 
 mongoose.connect(process.env.URI).
