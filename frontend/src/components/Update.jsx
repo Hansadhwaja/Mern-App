@@ -11,7 +11,7 @@ const Update = () => {
 
 
 const getSingleData=async ()=>{
- const response=await fetch(`http://localhost:5000/${id}`);
+ const response=await fetch(`https://mern-app-backend-indol.vercel.app/${id}`);
   const result=await response.json();
   
   if(response.ok){
@@ -33,7 +33,7 @@ async function handleEdit(e){
 
   const updatedUser={name,email,age};
 
-  const response= await fetch(`http://localhost:5000/${id}`,{
+  const response= await fetch(`https://mern-app-backend-indol.vercel.app/${id}`,{
     method:"PATCH",
     body:JSON.stringify(updatedUser),
     headers:{
