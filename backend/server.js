@@ -28,9 +28,6 @@ then(()=>{
 }).catch((err)=>{
     console.log("error:",err);
 });
-app.use("/",(req,res)=>{
-    res.send("Server is running.");
-})
 app.use(userRoute);
 
 
