@@ -8,7 +8,7 @@ const Read = () => {
 
 async function getData(){
   const response=await fetch("https://mern-app-backend-indol.vercel.app", {mode: "no-cors"});
-  const result=await response.json();
+  const result=await response.text();
   
   if(response.ok){
     console.log(result);
@@ -29,7 +29,7 @@ const handleDelete= async (id)=>{
     method:"DELETE",
     mode: "no-cors"
   });
-  const result=await response.json();
+  const result=await response.text();
   if(response.ok){
     setError("Successfully Deleted");
 
