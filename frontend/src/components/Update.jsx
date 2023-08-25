@@ -12,7 +12,7 @@ const Update = () => {
 
 const getSingleData=async ()=>{
  const response=await fetch(`https://mern-app-backend-indol.vercel.app/${id}`, {mode: "no-cors"});
-  const result=await response.text();
+  const result=await response.json();
   
   if(response.ok){
     console.log("updated user",result);
@@ -42,7 +42,7 @@ async function handleEdit(e){
     mode: "no-cors"
   });
 
-  const result=await response.text();
+  const result=await response.json();
 
   if(response.ok){
     console.log(result);
