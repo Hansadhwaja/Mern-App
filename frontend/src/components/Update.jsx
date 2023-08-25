@@ -11,7 +11,7 @@ const Update = () => {
 
 
 const getSingleData=async ()=>{
- const response=await fetch(`https://mern-app-backend-2yoxy2j7h-hansadhwaja.vercel.app/${id}`);
+ const response=await fetch(`https://mern-app-backend-2yoxy2j7h-hansadhwaja.vercel.app/${id}`, {mode: "no-cors"});
   const result=await response.json();
   
   if(response.ok){
@@ -38,7 +38,8 @@ async function handleEdit(e){
     body:JSON.stringify(updatedUser),
     headers:{
       "Content-Type":"application/json"
-    }
+    }, 
+    mode: "no-cors"
   });
 
   const result=await response.json();

@@ -20,7 +20,8 @@ const Create = () => {
       body:JSON.stringify(addUser),
       headers:{
         "Content-Type":"application/json"
-      }
+      },
+      mode: "no-cors"
     });
 
     const result=await response.json();
