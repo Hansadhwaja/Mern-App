@@ -9,7 +9,7 @@ const cors=require("cors");
 
 app.use(cors(
     {
-        origin:["https://mern-app-frontend-vert.vercel.app"],
+        origin:["https://mern-app-frontend-roan.vercel.app"],
         methods:["POST","GET","DELETE","PATCH","PUT"],
         credentials:true
     }
