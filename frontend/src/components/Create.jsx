@@ -24,7 +24,7 @@ const Create = () => {
       mode: "no-cors"
     });
 
-    const result=await response.json();
+    const result=await response.text();
 
     if(response.ok){
       console.log(result);
