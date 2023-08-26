@@ -7,19 +7,21 @@ app.use(express.json());
 const userRoute=require("./routes/userRoutes");
 const cors=require("cors");
 
-app.use(cors(
-    {
-        origin:["https://mern-app-frontend-roan.vercel.app"],
-        methods:["POST","GET","DELETE","PATCH","PUT"],
-        credentials:true
-    }
-));
+app.use(cors());
+
+// app.use(cors(
+//     {
+//         origin:["https://mern-app-frontend-roan.vercel.app"],
+//         methods:["POST","GET","DELETE","PATCH","PUT"],
+//         credentials:true
+//     }
+// ));
 
 
 mongoose.connect(process.env.URI).
 then(()=>{
     console.log("Connected to db successfully");
-    app.listen(process.env.PORT || 8000,(err)=>{
+    app.listen(process.env.PORT,(err)=>{
         if(err){
             console.log(err);
         }

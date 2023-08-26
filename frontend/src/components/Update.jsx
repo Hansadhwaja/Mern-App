@@ -11,7 +11,7 @@ const Update = () => {
 
 
 const getSingleData=async ()=>{
- const response=await fetch(`https://mern-app-api.vercel.app/${id}`, {mode: "no-cors"});
+ const response=await fetch(`https://mern-app-api-geux.onrender.com/${id}`, {mode: "no-cors"});
   const result=await response.json();
   
   if(response.ok){
@@ -33,7 +33,7 @@ async function handleEdit(e){
 
   const updatedUser={name,email,age};
 
-  const response= await fetch(`https://mern-app-api.vercel.app/${id}`,{
+  const response= await fetch(`https://mern-app-api-geux.onrender.com/${id}`,{
     method:"PATCH",
     body:JSON.stringify(updatedUser),
     headers:{
