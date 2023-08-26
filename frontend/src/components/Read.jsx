@@ -7,7 +7,7 @@ const Read = () => {
 
 
 async function getData(){
-  const response=await fetch("https://mern-app-api-geux.onrender.com", {mode: "no-cors"});
+  const response=await fetch("https://mern-app-api-geux.onrender.com/", {mode: "no-cors"});
   const result=await response.json();
   
   if(response.ok){

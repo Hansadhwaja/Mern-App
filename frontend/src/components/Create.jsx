@@ -15,7 +15,7 @@ const Create = () => {
 
     const addUser={name,email,age};
 
-    const response= await fetch("https://mern-app-api-geux.onrender.com",{
+    const response= await fetch("https://mern-app-api-geux.onrender.com/",{
       method:"POST",
       body:JSON.stringify(addUser),
       headers:{
