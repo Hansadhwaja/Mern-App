@@ -9,15 +9,6 @@ const cors=require("cors");
 
 app.use(cors());
 
-// app.use(cors(
-//     {
-//         origin:["https://mern-app-frontend-roan.vercel.app"],
-//         methods:["POST","GET","DELETE","PATCH","PUT"],
-//         credentials:true
-//     }
-// ));
-
-
 mongoose.connect(process.env.URI).
 then(()=>{
     console.log("Connected to db successfully");

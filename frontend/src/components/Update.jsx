@@ -11,7 +11,7 @@ const Update = () => {
 
 
 const getSingleData=async ()=>{
- const response=await fetch(`https://mern-app-api-geux.onrender.com/${id}`, {mode: "no-cors"});
+ const response=await fetch(`https://mern-app-api-geux.onrender.com/${id}`);
   const result=await response.json();
   
   if(response.ok){
@@ -38,8 +38,7 @@ async function handleEdit(e){
     body:JSON.stringify(updatedUser),
     headers:{
       "Content-Type":"application/json"
-    }, 
-    mode: "no-cors"
+    }
   });
 
   const result=await response.json();

@@ -7,7 +7,7 @@ const Read = () => {
 
 
 async function getData(){
-  const response=await fetch("https://mern-app-api-geux.onrender.com/", {mode: "no-cors"});
+  const response=await fetch("https://mern-app-api-geux.onrender.com/");
   const result=await response.json();
   
   if(response.ok){
@@ -26,8 +26,7 @@ async function getData(){
 const handleDelete= async (id)=>{
   console.log(id);
   const response=await fetch(`https://mern-app-api-geux.onrender.com/${id}`,{
-    method:"DELETE",
-    mode: "no-cors"
+    method:"DELETE"
   });
   const result=await response.json();
   if(response.ok){
