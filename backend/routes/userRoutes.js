@@ -24,7 +24,7 @@ router.post("/",async (req,res)=>{
 
 
 //get
-router.get("/",async (req,res)=>{
+router.get("/all",async (req,res)=>{
    
     try {
         const allData=await User.find();
